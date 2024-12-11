@@ -1,15 +1,15 @@
 import { Timezones, ArrayDecomposer, ArrayCloneMachine, SingleTimezone, UTCinterpreter } from "./classes.mjs";
 //note that the WorldTimeAPI is inaccurate with respect to GMT countries and the DST properties
-let coreTimezonesArray = JSON.parse(localStorage.getItem('timezones'));
+let coreTimezonesArray = JSON.parse(sessionStorage.getItem('timezones'));
 
 async function fetchTimezones() {
     //remove this when publishing
     if (!coreTimezonesArray) {
         let coreTimezoneObject = new Timezones();
         coreTimezonesArray = await coreTimezoneObject.getArray();
-        localStorage.setItem('timezones',JSON.stringify(coreTimezonesArray));
+        sessionStorage.setItem('timezones',JSON.stringify(coreTimezonesArray));
     } else {
-        coreTimezonesArray = JSON.parse(localStorage.getItem('timezones'));
+        coreTimezonesArray = JSON.parse(sessionStorage.getItem('timezones'));
     }
 };
 function populateDropDown(id, array, filter1, filter2, arrayNumber) {
