@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./timeCalculatorStyleSheet.css">
+</head>
+<body>
+    <div id="backgroundContainer">
+        <h1>Time calculator</h1>
+        <div id="gridContainer">
+            <div id="fromSelections" class="selections">
+                <h2>FROM</h2>
+                <div class="box">
+                    <label>Location:</label>
+                    <select id="fromLocation"></select>
+                </div>
+                <div class="box">
+                    <label>Area:</label>
+                    <select id="fromArea"></select>
+                </div>
+                <div class="box">
+                    <label>Region:</label>
+                    <select id="fromRegion"></select>
+                </div>
+                <div class="box timezoneDisplay" id="fromTimezoneDisplay">
+                </div>
+                
+            </div>
+            <div id="toSelections" class="selections">
+                <h2>TO</h2>
+                <div class="box">
+                    <label>Location:</label>
+                    <select id="toLocation"></select>
+                </div>
+                <div class="box">
+                    <label>Area:</label>
+                    <select id="toArea"></select>
+                </div>
+                <div class="box">
+                    <label>Region:</label>
+                    <select id="toRegion"></select>
+                </div>
+                <div class="box timezoneDisplay" id="toTimezoneDisplay">
+                </div>
+            </div>
+            <div id="fromUTCdata" class="data">
+                <h2>UTC stats</h2>
+                <div class="box">
+                    <label>UTC zone:</label>
+                    <span id="fromUTCOffset"></span>
+                </div>
+                <div class="box">
+                    <label>Daylight Savings is:</label>
+                    <span id="fromDSTboolean"></span>
+                </div>
+                <div class="box">
+                    <label>Daylight savings period is from:</label>
+                    <span id="fromDSTperiod"></span>
+                </div>
+            </div>
+            <div id="toUTCdata" class="data">
+                <h2>UTC stats</h2>
+                <div class="box">
+                    <label>UTC zone:</label>
+                    <span id="toUTCOffset"></span>
+                </div>
+                <div class="box">
+                    <label>Daylight Savings is:</label>
+                    <span id="toDSTboolean"></span>
+                </div>
+                <div class="box">
+                    <label>Daylight savings period is from:</label>
+                    <span id="toDSTperiod"></span>
+                </div>
+            </div>
+            <div id="fromTimeInput" class="">
+                <h2>Time input</h2>
+                <div class="box">
+                    <label for="dateTimePicker">From date and time:</label>
+                    <input id="dateTimePicker" type="datetime-local">
+                    <!--<button>Click for current date and timezone (your local device)</button>-->
+                </div>
+            </div>
+            <div id="toTimeOutput" class="">
+                <h2>Time calculated</h2>
+                <div class="box">
+                    <label>To date and time:</label>
+                    <span id="calculatedDateTime"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="timeCalculatorScript.mjs" type="module" ></script>
+</body>
