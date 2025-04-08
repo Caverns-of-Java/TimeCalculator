@@ -14,7 +14,7 @@ class Timezones {
             let response = await fetch('https://worldtimeapi.org/api/timezone');
             //let response = await fetch('https://worldtimeapi.org/api/timezone', { mode: 'no-cors' });
             if (!response.ok) {
-                throw new Error('Network down');
+                throw new Error(`${response.status}`);
             }
             this.array = await response.json();
         } catch (error) {
