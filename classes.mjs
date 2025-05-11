@@ -12,6 +12,7 @@ class Timezones {
     async initialize() {
         try {
             let response = await fetch('https://worldtimeapi.org/api/timezone', { mode: 'no-cors' });
+            console.log(response);
             if (!response.ok) {
                 throw new Error('Network down');
             }
