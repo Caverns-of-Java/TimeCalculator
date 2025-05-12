@@ -13,6 +13,6 @@
       "type": "image/png"
     }
   ],
-  "start_url": "/",
+  "start_url": "/TimeCalculator/",
   "display": "standalone"
 }
